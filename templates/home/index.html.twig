@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WENGLER Joffrey SPRL - Parc et Jardin{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<div class="bg-success text-white py-5">
+    <div class="container text-center py-5">
+        <h1 class="display-3 fw-bold mb-3">WENGLER Joffrey SPRL</h1>
+        <p class="lead fs-3 mb-4">Parc et Jardin</p>
+        <p class="fs-5">Votre expert en aménagement d'espaces verts</p>
+        <div class="mt-4">
+            <a href="#services" class="btn btn-light btn-lg me-3">Nos Services</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Nous Contacter</a>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold text-success">Nos Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-success mb-3">🌳</div>
+                        <h3 class="card-title h4">Entretien de Parcs</h3>
+                        <p class="card-text">Taille, élagage et entretien régulier de vos espaces verts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-success mb-3">🌿</div>
+                        <h3 class="card-title h4">Aménagement de Jardins</h3>
+                        <p class="card-text">Création et conception de jardins sur mesure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-body text-center">
+                        <div class="display-4 text-success mb-3">🌺</div>
+                        <h3 class="card-title h4">Plantation et Fleurissement</h3>
+                        <p class="card-text">Sélection et plantation de végétaux adaptés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold text-success mb-4">À Propos</h2>
+                <p class="lead">
+                    WENGLER Joffrey SPRL est votre partenaire de confiance pour tous vos projets d'aménagement 
+                    et d'entretien d'espaces verts.
+                </p>
+                <p>
+                    Avec notre expertise et notre passion pour la nature, nous transformons vos espaces 
+                    extérieurs en véritables havres de paix.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5 bg-success bg-opacity-10 rounded">
+                    <h3 class="text-success mb-3">Pourquoi nous choisir ?</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">✓ Expertise professionnelle</li>
+                        <li class="mb-2">✓ Matériel de qualité</li>
+                        <li class="mb-2">✓ Respect de l'environnement</li>
+                        <li class="mb-2">✓ Devis gratuit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold text-success">Contactez-nous</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card shadow border-success">
+                    <div class="card-body p-4">
+                        <p class="text-center mb-4">
+                            <strong class="fs-4">WENGLER Joffrey SPRL</strong>
+                        </p>
+                        <div class="mb-3">
+                            <i class="bi bi-telephone"></i>
+                            <strong>Téléphone:</strong> <a href="tel:+32xxxxxxxxx" class="text-decoration-none">+32 XXX XX XX XX</a>
+                        </div>
+                        <div class="mb-3">
+                            <i class="bi bi-envelope"></i>
+                            <strong>Email:</strong> <a href="mailto:contact@wengler.be" class="text-decoration-none">contact@wengler.be</a>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-success btn-lg">Demander un Devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; {{ "now"|date("Y") }} WENGLER Joffrey SPRL - Tous droits réservés</p>
+    </div>
+</footer>
+{% endblock %}

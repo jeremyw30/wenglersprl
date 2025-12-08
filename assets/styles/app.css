@@ -1,3 +1,27 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 body {
-    background-color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-success {
+    background-color: #2d6a4f !important;
+}
+
+.text-success {
+    color: #2d6a4f !important;
+}
+
+.btn-success {
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+}
+
+.btn-success:hover {
+    background-color: #1b4332;
+    border-color: #1b4332;
+}
+
+.border-success {
+    border-color: #2d6a4f !important;
 }
