@@ -1,194 +1,214 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}WENGLER Joffrey SPRL - Expert en Parc et Jardin{% endblock %}
+{% block title %}WENGLER SPRL — Création & Aménagement Paysager{% endblock %}
+
+{% block stylesheets %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6faf5;--surface:#ffffff;--elev:#f1f7f0;--ink:#243529;--muted:#5f6f64;--line:#dce8dc;--green:#2ab571;--green-2:#1f9c63;--mint:#e7f6ee;--radius:20px;--shadow:0 14px 40px rgba(28,56,36,.08), 0 4px 18px rgba(28,56,36,.06)}*{box-sizing:border-box}html,body{margin:0;padding:0}html{background:radial-gradient(1000px 680px at 12% -6%, #edf7f0, transparent 55%),radial-gradient(900px 520px at 85% 12%, #eaf6ef, transparent 60%),linear-gradient(180deg, #f8fbf7, #f6faf5);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}::selection{background:rgba(42,181,113,.18)}img{max-width:100%;height:auto;display:block;border-radius:16px}a{color:#1e7f53;text-underline-offset:4px}a:hover{text-decoration:underline}.wrap{width:min(1200px,92%);margin-inline:auto}.section{padding:2.6rem 0}header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.8);backdrop-filter:blur(12px) saturate(1.2);border-bottom:1px solid var(--line);min-height:140px}.head{display:flex;align-items:center;gap:1.2rem;justify-content:space-between;padding:1rem 0}.brand{display:flex;align-items:center;gap:0}.logo{width:150px;height:150px;border-radius:86px;object-fit:cover;box-shadow:none}nav{display:flex;gap:.4rem;flex-wrap:wrap}nav a{color:var(--muted);padding:.55rem .8rem;border-radius:12px;border:1px solid transparent;text-decoration:none}nav a:hover,nav a.active{color:var(--green-2);background:rgba(42,181,113,0.13);border-color:rgba(42,181,113,.25);box-shadow:0 0 0 2px rgba(42,181,113,.14) inset;border-radius:50px;padding-left:1.2em;padding-right:1.2em;transition:all 0.18s}.hero{display:grid;gap:1.4rem;grid-template-columns:1fr;align-items:center}@media (min-width: 900px){.hero{grid-template-columns:1.1fr .9fr}}.eyebrow{display:inline-block;padding:.25rem .6rem;border-radius:999px;border:1px solid rgba(31, 150, 96, .18);background:#f0fbf5;color:#1f6d49;font-size:.8rem;letter-spacing:.3px}h1{font-size:clamp(2rem, 4.6vw, 3.2rem);line-height:1.15;margin:.6rem 0}.lead{color:var(--muted);max-width:62ch}.cta-line{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.1rem}.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.25rem;border-radius:999px;font-weight:700;letter-spacing:.2px;border:1px solid rgba(42,181,113,.25);background:linear-gradient(180deg,#b7f0d2,#55d598);color:#083a25;box-shadow:0 8px 28px rgba(42,181,113,.25);text-decoration:none}.btn:hover{box-shadow:0 14px 40px rgba(42,181,113,.35);transform:translateY(-1px)}.btn--ghost{background:transparent;color:#103d29;border:1px solid var(--line)}.btn--ghost:hover{border-color:rgba(42,181,113,.4);box-shadow:0 0 0 2px rgba(42,181,113,.12) inset}.orb{aspect-ratio:1/1;border-radius:24px;background:radial-gradient(120% 100% at 70% 20%, #e3f6eb, transparent 40%),linear-gradient(180deg,#ffffff,#f5fbf7);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.orb img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;opacity:.95}.strip{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.82));border-radius:var(--radius);box-shadow:var(--shadow)}.services{display:grid;gap:1rem}@media (min-width: 900px){.services{grid-template-columns:repeat(3, 1fr)}}.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#ffffff,#f7fbf8);padding:1.1rem;display:grid;gap:.6rem;transition:transform .25s ease, box-shadow .25s ease}.card:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(28,56,36,.14)}.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#f2fbf6;border:1px solid var(--line);box-shadow:inset 0 0 0 6px #f7fdf9}.badge{display:inline-block;padding:.22rem .55rem;border-radius:999px;border:1px solid #d7eedf;background:#f3fbf7;color:#2a7a53;font-size:.78rem}.chips{display:flex;flex-wrap:wrap;gap:.5rem}.chip{padding:.5rem .75rem;border-radius:999px;border:1px solid var(--line);background:#ffffff;color:var(--muted)}.timeline{position:relative;padding-left:1.2rem}.timeline::before{content:"";position:absolute;left:.2rem;top:.2rem;bottom:.2rem;width:2px;background:linear-gradient(180deg,rgba(42,181,113,.3),rgba(42,181,113,.05))}.step{position:relative;margin:0 0 1rem 0;padding:0 0 0 .9rem}.step::before{content:"";position:absolute;left:-.45rem;top:.2rem;width:10px;height:10px;border-radius:50%;background:linear-gradient(180deg,var(--green),#1f6f4a);box-shadow:0 0 0 4px rgba(42,181,113,.18)}.masonry{columns:1;column-gap:1.2rem}@media (min-width:700px){.masonry{columns:2}}@media (min-width:1100px){.masonry{columns:3}}.masonry figure{position:relative;break-inside:avoid;margin:0 0 1.2rem 0;--tilt:0deg;transform:rotate(var(--tilt));transition:transform .35s ease, box-shadow .35s ease;filter:drop-shadow(0 12px 24px rgba(28,56,36,.12))}.masonry figure:nth-child(6n+1){--tilt:-3deg}.masonry figure:nth-child(6n+2){--tilt:2.5deg}.masonry figure:nth-child(6n+3){--tilt:-1.8deg}.masonry img{border:1px solid var(--line);width:100%;object-fit:cover;height:auto}.masonry figcaption{text-align:center;color:#486154;font-size:.9rem}.masonry figure:hover{transform:rotate(0deg) translateY(-4px) scale(1.02)}details{border:1px solid var(--line);border-radius:14px;padding:1rem;background:#ffffff}details[open]{box-shadow:0 0 0 2px rgba(42,181,113,.1) inset}summary{cursor:pointer}.cta{display:grid;gap:1rem;align-items:center;padding:1.6rem;border:1px solid var(--line);border-radius:20px;background:radial-gradient(600px 240px at 10% 20%, #e8f8f0, transparent 70%),linear-gradient(135deg,#ffffff,#f4fbf7);box-shadow:var(--shadow)}footer{padding:2.2rem 0;color:var(--muted)}.masthead{position:relative;min-height:58vh;display:grid;place-items:center;margin:0 0 2rem 0}.split-panels{display:grid;gap:1rem;grid-template-columns:1fr}@media (min-width: 900px){.split-panels{grid-template-columns:1fr 1fr}}.tile{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:320px;text-decoration:none}.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.1))}.tile .label{position:absolute;inset:auto 0 22px 0;text-align:center;color:#fff;font-weight:700;font-size:clamp(1.3rem,2.6vw,2rem);letter-spacing:.08em;text-transform:uppercase;text-shadow:0 12px 30px rgba(0,0,0,.35)}.collage{position:relative;min-height:380px;margin:1.6rem 0 2.2rem 0}.polaroids{position:relative;padding:2rem 0}.polaroids figure{position:absolute;margin:0;background:#fff;border-radius:12px;box-shadow:0 18px 36px rgba(28,56,36,.18);border:1px solid #e9f3ea;transition:transform .25s ease, box-shadow .25s ease}.polaroids img{display:block;border-radius:8px;width:240px;height:160px;object-fit:cover}.polaroids figcaption{padding:.45rem .6rem .7rem;color:#3a5a48;font-size:.9rem}.polaroids figure:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(28,56,36,.22)}.polaroids .p1{left:4%;top:10%;transform:rotate(-6deg)}.polaroids .p2{left:22%;top:0;transform:rotate(4deg)}.polaroids .p3{left:40%;top:18%;transform:rotate(-2deg)}.polaroids .p4{left:60%;top:6%;transform:rotate(8deg)}.polaroids .p5{left:72%;top:28%;transform:rotate(-9deg)}@media (max-width:900px){.polaroids figure{position:relative;transform:none;margin:0 1rem 1rem 0;display:inline-block}.polaroids{display:flex;flex-wrap:wrap;gap:1rem}}.reveal{opacity:0;transform:translateY(14px);animation:reveal .7s ease forwards}@keyframes reveal{to{opacity:1;transform:none}}
+  </style>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function setActiveNav() {
+        var hash = window.location.hash;
+        var navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(function(link) {
+          link.classList.remove('active');
+          if(hash && link.getAttribute('href') === hash) link.classList.add('active');
+        });
+      }
+      setActiveNav();
+      window.addEventListener('hashchange', setActiveNav);
+      document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          setTimeout(setActiveNav, 10);
+        });
+      });
+    });
+  </script>
+{% endblock %}
 
 {% block body %}
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-        <!-- Logo à gauche -->
-        <a class="navbar-brand" href="{{ path('app_home') }}">
-            <div class="logo-box">
-                <span class="logo-text">WENGLER</span>
-            </div>
-        </a>
-
-        <!-- Bouton mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menu navigation -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-4">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ path('app_home') }}">Accueil</a>
-                </li>
-                
-                <!-- Dropdown Services -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#entretien">Entretien de jardins</a></li>
-                        <li><a class="dropdown-item" href="#amenagement">Aménagement paysager</a></li>
-                        <li><a class="dropdown-item" href="#plantation">Plantation</a></li>
-                        <li><a class="dropdown-item" href="#elagage">Élagage</a></li>
-                        <li><a class="dropdown-item" href="#terrasse">Terrasses & Allées</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#realisations">Nos Réalisations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contactez-nous</a>
-                </li>
-            </ul>
-        </div>
+<header>
+    <div class="wrap head" style="background:linear-gradient(180deg,#f6faf5 0%,#e7f6ee 100%);box-shadow:0 2px 16px rgba(36,53,41,.06);border-radius:0 0 24px 24px;"> 
+      <div class="brand">
+        <img src="{{ asset('images/logop.png') }}" alt="Logo WENGLER SPRL" class="logo" />
+      </div>
+      <nav>
+        <a href="#offres">Offres</a>
+        <a href="#atouts">Atouts</a>
+        <a href="#etapes">Étapes</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--ghost" href="#contact">Devis</a>
+      </nav>
     </div>
-</nav>
+  </header>
 
-<!-- Hero Section -->
-<div class="hero-banner">
-    <div class="container">
-        <div class="row align-items-center py-5">
-            <div class="col-lg-8">
-                <h1 class="display-4 fw-bold text-success mb-3">WENGLER Joffrey SPRL</h1>
-                <p class="lead text-muted">Votre expert en parc et jardin</p>
-                <a href="#contact" class="btn btn-success btn-lg mt-3">Demander un devis gratuit</a>
-            </div>
-        </div>
-    </div>
-</div>
+  <main class="wrap">
+    <section class="masthead">
+      <div style="display:flex;justify-content:center;align-items:center;height:180px;width:100%;margin-bottom:1.2rem;">
+        <span style="font-family:'Inter',serif;font-size:2.1rem;color:#1f9c63;font-weight:600;letter-spacing:.02em;background:linear-gradient(90deg,#e7f6ee 0%,#fff 100%);padding:.7rem 2.2rem;border-radius:32px;box-shadow:0 8px 32px rgba(31,156,99,.09);">WENGLER SPRL — Création, aménagement et entretien d'espaces verts</span>
+      </div>
+    </section>
 
-<!-- Services Section -->
-<section id="services" class="services-section">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <span class="section-label">Ce que nous faisons</span>
-            <h2 class="section-title">Nos Services</h2>
-            <p class="section-description">Des solutions complètes pour vos espaces verts</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM5 7.585c0 .352.088.677.24.963l-.897 1.794a.5.5 0 0 0 .654.654l1.794-.897c.286.152.611.24.963.24h1.494c.352 0 .677-.088.963-.24l1.794.897a.5.5 0 1 0 .654-.654L11.76 8.548c.152-.286.24-.611.24-.963V6c0-.828-.672-1.5-1.5-1.5h-4A1.5 1.5 0 0 0 5 6v1.585z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Entretien de Jardins</h3>
-                    <p class="service-description">Tonte, taille de haies, débroussaillage et entretien régulier de vos espaces verts</p>
-                    <ul class="service-list">
-                        <li>Tonte de pelouse</li>
-                        <li>Taille de haies</li>
-                        <li>Élagage d'arbres</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card featured">
-                    <div class="service-badge">Populaire</div>
-                    <div class="service-icon">
-                        <svg width="60" height="60" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Aménagement Paysager</h3>
-                    <p class="service-description">Conception et création de jardins sur mesure adaptés à vos besoins et votre budget</p>
-                    <ul class="service-list">
-                        <li>Étude personnalisée</li>
-                        <li>Plans 3D</li>
-                        <li>Réalisation complète</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Plantation & Fleurissement</h3>
-                    <p class="service-description">Sélection et plantation de végétaux adaptés à votre environnement</p>
-                    <ul class="service-list">
-                        <li>Massifs floraux</li>
-                        <li>Arbustes et arbres</li>
-                        <li>Potagers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <section class="split-panels">
+      <a class="tile" href="#machines">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop" alt="Nos machines" />
+        <div class="label">Nos machines</div>
+        <div style="position:absolute;bottom:12px;left:0;right:0;text-align:center;color:#fff;font-size:1.1rem;text-shadow:0 4px 16px rgba(0,0,0,.18)">Enfouisseuse, rogneuse, broyeur, mini-pelle…</div>
+      </a>
+      <a class="tile" href="#equipe">
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=1600&auto=format&fit=crop" alt="Notre équipe" />
+        <div class="label">Notre équipe</div>
+        <div style="position:absolute;bottom:12px;left:0;right:0;text-align:center;color:#fff;font-size:1.1rem;text-shadow:0 4px 16px rgba(0,0,0,.18)">Professionnels passionnés, conseils et suivi personnalisé.</div>
+      </a>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="display-5 fw-bold text-success mb-4">À Propos</h2>
-                <p class="lead">
-                    WENGLER Joffrey SPRL est votre partenaire de confiance pour tous vos projets d'aménagement 
-                    et d'entretien d'espaces verts.
-                </p>
-                <p>
-                    Avec notre expertise et notre passion pour la nature, nous transformons vos espaces 
-                    extérieurs en véritables havres de paix.
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <div class="p-5 bg-success bg-opacity-10 rounded">
-                    <h3 class="text-success mb-3">Pourquoi nous choisir ?</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">✓ Expertise professionnelle</li>
-                        <li class="mb-2">✓ Matériel de qualité</li>
-                        <li class="mb-2">✓ Respect de l'environnement</li>
-                        <li class="mb-2">✓ Devis gratuit</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <section class="collage">
+      <div class="polaroids">
+        <figure class="p1"><img src="{{ asset('images/massif1.jpg') }}" alt="massif1"/><figcaption>création de parterre</figcaption></figure>
+        <figure class="p2"><img src="https://images.unsplash.com/photo-1515096788709-a3cf4ce0a4a6?q=80&w=900&auto=format&fit=crop" alt="Piscine"/><figcaption>Piscine & terrasse</figcaption></figure>
+        <figure class="p3"><img src="https://images.unsplash.com/photo-1594737625785-8175920e1d54?q=80&w=900&auto=format&fit=crop" alt="Allée"/><figcaption>Allée pavée</figcaption></figure>
+        <figure class="p4"><img src="https://images.unsplash.com/photo-1523430410476-0185cb1f6ff9?q=80&w=900&auto=format&fit=crop" alt="Massif"/><figcaption>Massif</figcaption></figure>
+        <figure class="p5"><img src="https://images.unsplash.com/photo-1458239920096-bffee8aba36f?q=80&w=900&auto=format&fit=crop" alt="Terrasse"/><figcaption>Terrasse bois</figcaption></figure>
+      </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5 display-5 fw-bold text-success">Contactez-nous</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card shadow border-success">
-                    <div class="card-body p-4">
-                        <p class="text-center mb-4">
-                            <strong class="fs-4">WENGLER Joffrey SPRL</strong>
-                        </p>
-                        <div class="mb-3">
-                            <i class="bi bi-telephone"></i>
-                            <strong>Téléphone:</strong> <a href="tel:+32xxxxxxxxx" class="text-decoration-none">+32 XXX XX XX XX</a>
-                        </div>
-                        <div class="mb-3">
-                            <i class="bi bi-envelope"></i>
-                            <strong>Email:</strong> <a href="mailto:contact@wengler.be" class="text-decoration-none">contact@wengler.be</a>
-                        </div>
-                        <div class="text-center mt-4">
-                            <a href="#" class="btn btn-success btn-lg">Demander un Devis</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section hero" id="intro">
+      <div class="copy reveal">
+        <span class="eyebrow">Création & aménagement</span>
+        <h1>Conception et aménagements paysagers — durables, élégants et sur‑mesure.</h1>
+        <p class="lead">Conception, terrassements, végétal, minéral, clôtures, arrosage… Nous pilotons votre projet de A à Z avec des finitions exigeantes et des matériaux qui durent.</p>
+        <div class="cta-line">
+          <a class="btn" href="#contact">Demander un devis</a>
+          <a class="btn btn--ghost" href="#galerie">Voir des réalisations</a>
         </div>
-    </div>
-</section>
+      </div>
+      <div class="visual reveal">
+        <div class="orb">
+          <img src="https://images.unsplash.com/photo-1523430410476-0185cb1f6ff9?q=80&w=1600&auto=format&fit=crop" alt="Terrasse et jardin" />
+        </div>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
-    <div class="container">
-        <p class="mb-0">&copy; {{ "now"|date("Y") }} WENGLER Joffrey SPRL - Tous droits réservés</p>
+    <section class="section" id="offres">
+      <div class="strip" style="padding:2rem;margin-bottom:2rem;text-align:center">
+        <h2 style="margin:.2rem 0 0 0;font-size:2.2rem">Portfolio de nos services</h2>
+        <p class="lead" style="font-size:1.15rem"><br>Chaque projet est unique, chaque jardin est une création sur-mesure.</p>
+      </div>
+      <div class="services" style="grid-template-columns:repeat(2,1fr);gap:2.2rem">
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">🌱</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Préparation du sol</h3>
+          <p class="lead">Enfouisseuse, compactage, ajout de terre, nivellement.</p>
+          <span class="badge">Sol</span>
+        </article>
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">🌾</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Semis</h3>
+          <p class="lead">Gazon, pelouse, engazonnement sur-mesure.</p>
+          <span class="badge">Semis</span>
+        </article>
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">✂️</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Taille</h3>
+          <p class="lead">Haies, arbustes, rosiers, mise en forme élégante.</p>
+          <span class="badge">Taille</span>
+        </article>
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">🌺</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Massifs</h3>
+          <p class="lead">Conception et plantation de massifs fleuris.</p>
+          <span class="badge">Massif</span>
+        </article>
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">🌿</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Entretien</h3>
+          <p class="lead">Désherbage, soins des plantes, suivi saisonnier.</p>
+          <span class="badge">Entretien</span>
+        </article>
+        <article class="card reveal" style="padding:2rem 1.2rem;text-align:center">
+          <div class="icon" style="font-size:2.8rem;background:#e7f6ee">🪓</div>
+          <h3 style="margin:.6rem 0;font-size:1.3rem">Élagage</h3>
+          <p class="lead">Sécurisation, mise en forme, valorisation des arbres.</p>
+          <span class="badge">Élagage</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="atouts">
+      <div class="strip" style="padding:1.2rem">
+        <h2 style="margin:0 0 .4rem 0">Pourquoi nous ?</h2>
+        <div class="chips">
+          <span class="chip">✦ Équipe dédiée</span>
+          <span class="chip">✦ Matériaux pro</span>
+          <span class="chip">✦ Planning clair</span>
+          <span class="chip">✦ SAV & garanties</span>
+          <span class="chip">✦ Conseils d'entretien</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="etapes">
+      <h2>Étapes d'un projet</h2>
+      <div class="timeline">
+        <div class="step reveal"><strong>1. Visite & écoute</strong><br><span class="lead">Analyse du terrain, usages, budget.</span></div>
+        <div class="step reveal"><strong>2. Avant‑projet</strong><br><span class="lead">Esquisses + estimation.</span></div>
+        <div class="step reveal"><strong>3. Validation</strong><br><span class="lead">Choix définitifs, planning.</span></div>
+        <div class="step reveal"><strong>4. Réalisation</strong><br><span class="lead">Suivi de chantier.</span></div>
+        <div class="step reveal"><strong>5. Remise & conseils</strong><br><span class="lead">Guide d'entretien, SAV.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <h2>Réalisations</h2>
+      <div class="masonry">
+        <figure class="reveal"><img src="{{ asset('images/pose3.jpg') }}" alt="Massif"/><figcaption>Massif</figcaption></figure>
+        <figure class="reveal"><img src="{{ asset('images/semer2.jpg') }}" alt="Terrasse"/><figcaption>Terrasse</figcaption></figure>
+        <figure class="reveal"><img src="{{ asset('images/avant4.jpg') }}" alt="Allée"/><figcaption>Allée pavée</figcaption></figure>
+        <figure class="reveal"><img src="{{ asset('images/massif1.jpg') }}" alt="Jardin"/><figcaption>Jardin</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <div style="display:grid;gap:1rem">
+        <details class="reveal" open>
+          <summary><strong>Petites surfaces : possible ?</strong></summary>
+          <p>Oui, nous adaptons la technique aux contraintes de surface.</p>
+        </details>
+        <details class="reveal">
+          <summary><strong>Délais moyens ?</strong></summary>
+          <p>Selon saison et ampleur. Un planning est validé avant démarrage.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="cta">
+        <div>
+          <h2 style="margin:0">Parlons de votre projet</h2>
+          <p style="margin:.3rem 0 0 0" class="lead">Obtenez une estimation gratuite.</p>
+        </div>
+        <div>
+          <a class="btn" href="mailto:contact@wengler.be?subject=Devis">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <small>© {{ "now"|date("Y") }} WENGLER Joffrey — Tous droits réservés</small>
+      <small><a href="#">Mentions légales</a> · <a href="#">RGPD</a></small>
     </div>
-</footer>
+  </footer>
 {% endblock %}
