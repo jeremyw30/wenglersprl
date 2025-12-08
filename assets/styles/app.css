@@ -1,27 +1,86 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* ===== Variables ===== */
+:root {
+    --primary-green: #2d6a4f;
+    --secondary-green: #52b788;
+    --dark-green: #1b4332;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.bg-success {
-    background-color: #2d6a4f !important;
+/* ===== Navbar ===== */
+.navbar {
+    padding: 1rem 0;
 }
 
-.text-success {
-    color: #2d6a4f !important;
+.logo-box {
+    background: var(--primary-green);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
 }
 
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.navbar-nav {
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-green) !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem 0;
+}
+
+/* ===== Buttons ===== */
 .btn-success {
-    background-color: #2d6a4f;
-    border-color: #2d6a4f;
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
 }
 
 .btn-success:hover {
-    background-color: #1b4332;
-    border-color: #1b4332;
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
 }
 
-.border-success {
-    border-color: #2d6a4f !important;
+/* ===== Utilities ===== */
+.text-success {
+    color: var(--primary-green) !important;
 }
