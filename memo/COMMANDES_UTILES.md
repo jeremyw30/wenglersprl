@@ -21,7 +21,7 @@ symfony server:stop
 ```bash
 php -S localhost:8000 -t public/
 ```
-''' changez de port > symfony server:start --port=8001
+### changez de port > symfony server:start --port=8001
 ---
 
 ## 🎨 Webpack Encore (Assets)
